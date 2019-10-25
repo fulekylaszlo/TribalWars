@@ -1,4 +1,4 @@
-#define RESET       "\033[0m"              /* Reset */
+asbfjhfsabjasbfjhasbfjhasfjasfj#define RESET       "\033[0m"              /* Reset */
 #define GRAY        "\033[1;30m"           /* Gray */
 #define BOLDRED     "\033[1m\033[31m"      /* Bold Red */
 #define BOLDBLUE    "\033[1m\033[34m"      /* Bold Blue */
