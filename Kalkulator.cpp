@@ -1,5 +1,5 @@
-asbfjhfsabjasbfjhasbfjhasfjasfj#define RESET       "\033[0m"              /* Reset */
-#define GRAY        "\033[1;30m"           /* Gray */
+#define RESET       "\033[0m"              /* Reset */
+#define GRAY        "\033[90m"           /* Gray */
 #define BOLDRED     "\033[1m\033[31m"      /* Bold Red */
 #define BOLDBLUE    "\033[1m\033[34m"      /* Bold Blue */
 
@@ -7,7 +7,7 @@ asbfjhfsabjasbfjhasbfjhasfjasfj#define RESET       "\033[0m"              /* Res
 #include <iostream>
 #include "stdlib.h"
 #include <unistd.h>
-using namespace std;sdfsdfsdf
+using namespace std;
 
 int main()
 {
@@ -28,7 +28,7 @@ int main()
     int zaszlohasznalat = 0;
     
     //Zászlók:
-    double zaszlo = 0;
+    float zaszlo = 0;
     cout << BOLDRED << "->Hány százalékos érmecsökkentéses zászlód van?" << RESET << endl;
     cout << GRAY << "#----------------------------------" << RESET << endl;
     cout << GRAY << "#Zászló használat nélkül '0'-át írj!" << RESET << endl;
@@ -46,27 +46,27 @@ int main()
     cin >> zaszlo;
     
     //1 darab érme legyártásának költségei zászlóval
-    double ermefa = 28000 - (28000 * (zaszlo / 100));
-    double ermeagyag = 30000 - (30000 * (zaszlo / 100));
-    double ermevas = 25000 - (25000 * (zaszlo / 100));
+    float ermefa = 28000 - (28000 * (zaszlo / 100));
+    float ermeagyag = 30000 - (30000 * (zaszlo / 100));
+    float ermevas = 25000 - (25000 * (zaszlo / 100));
     
     //1 darab nemes legyártásának költségei
-    double nemesfa = 40000;
-    double nemesagyag = 50000;
-    double nemesvas = 50000;
+    float nemesfa = 40000;
+    float nemesagyag = 50000;
+    float nemesvas = 50000;
     
     //1 falu termelése 1 óra alatt
-    double termelesfa = 0;
-    double termelesagyag = 0;
-    double termelesvas = 0;
+    float termelesfa = 0;
+    float termelesagyag = 0;
+    float termelesvas = 0;
     
     //Faluban lévő nyersanyagok
-    double alapfa = 0;
-    double alapagyag = 0;
-    double alapvas = 0;
+    float alapfa = 0;
+    float alapagyag = 0;
+    float alapvas = 0;
     
     //Szükséges érme mennyisége 1 darab nemeshez
-    double ermemennyiseg = 0;
+    float ermemennyiseg = 0;
     
     //Termelés megadása
     cout << BOLDRED << "->Add meg a termelésed:" << RESET << endl;
@@ -125,9 +125,9 @@ int main()
     cin >> ermemennyiseg;
     
     //Összesített nyersanyagszükséglet
-    double osszesfa = (ermemennyiseg * ermefa) + nemesfa;
-    double osszesagyag = (ermemennyiseg * ermeagyag) + nemesagyag;
-    double osszesvas = (ermemennyiseg * ermevas) + nemesvas;
+    float osszesfa = (ermemennyiseg * ermefa) + nemesfa;
+    float osszesagyag = (ermemennyiseg * ermeagyag) + nemesagyag;
+    float osszesvas = (ermemennyiseg * ermevas) + nemesvas;
     
     cout << GRAY << "#Szükséges idő/nyersanyagok a gyártáshoz:" << RESET << endl;
     cout << GRAY << "#----------------------------------------" << RESET << endl;
