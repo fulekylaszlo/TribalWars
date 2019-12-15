@@ -28,9 +28,9 @@ int main()
     int zaszlohasznalat = 0;
     
     //Zászlók:
-    float zaszlo = 0;
-    cout << BOLDRED << "->Hány százalékos érmecsökkentéses zászlód van?" << RESET << endl;
-    cout << GRAY << "#----------------------------------" << RESET << endl;
+    float bonusz = 0;
+    cout << BOLDRED << "->Hány százalékos érmecsökkentéses bónuszaid vannak?" << RESET << endl;
+   /* cout << GRAY << "#----------------------------------" << RESET << endl;
     cout << GRAY << "#Zászló használat nélkül '0'-át írj!" << RESET << endl;
     cout << GRAY << "#10 %-os zászló esetén '10'-et írj!" << RESET << endl;
     cout << GRAY << "#12 %-os zászló esetén '12'-őt írj!" << RESET << endl;
@@ -41,16 +41,17 @@ int main()
     cout << GRAY << "#22 %-os zászló esetén '22'-őt írj!" << RESET << endl;
     cout << GRAY << "#23 %-os zászló esetén '23'-at írj!" << RESET << endl;
     cout << GRAY << "#24 %-os zászló esetén '24'-et írj!" << RESET << endl;
-    cout << GRAY << "#----------------------------------" << RESET << endl;
-    cout << GRAY << "Zászló:" << RESET;
-    cin >> zaszlo;
+    cout << GRAY << "#----------------------------------" << RESET << endl; */
+    cout << GRAY << "Bónusz:" << RESET;
+    cin >> bonusz;
     
     //1 darab érme legyártásának költségei zászlóval
-    float ermefa = 28000 - (28000 * (zaszlo / 100));
-    float ermeagyag = 30000 - (30000 * (zaszlo / 100));
-    float ermevas = 25000 - (25000 * (zaszlo / 100));
+    float ermefa = 28000 - (28000 * (bonusz / 100));
+    float ermeagyag = 30000 - (30000 * (bonusz / 100));
+    float ermevas = 25000 - (25000 * (bonusz / 100));
     
     //1 darab nemes legyártásának költségei
+    float nemesmennyiseg = 0;
     float nemesfa = 40000;
     float nemesagyag = 50000;
     float nemesvas = 50000;
@@ -124,10 +125,14 @@ int main()
     cout << BOLDRED << "->Add meg hány érme kell a nemes legyártásához:" << RESET;
     cin >> ermemennyiseg;
     
+    //Nemes számának megadása
+    cout << BOLDRED << "->Add meg hány nemest szeretnél hozzá legyártani:" << RESET;
+    cin >> nemesmennyiseg;
+    
     //Összesített nyersanyagszükséglet
-    float osszesfa = (ermemennyiseg * ermefa) + nemesfa;
-    float osszesagyag = (ermemennyiseg * ermeagyag) + nemesagyag;
-    float osszesvas = (ermemennyiseg * ermevas) + nemesvas;
+    float osszesfa = (ermemennyiseg * ermefa) + (nemesfa * nemesmennyiseg);
+    float osszesagyag = (ermemennyiseg * ermeagyag) + (nemesagyag * nemesmennyiseg);
+    float osszesvas = (ermemennyiseg * ermevas) + (nemesvas * nemesmennyiseg);
     
     cout << GRAY << "#Szükséges idő/nyersanyagok a gyártáshoz:" << RESET << endl;
     cout << GRAY << "#----------------------------------------" << RESET << endl;
