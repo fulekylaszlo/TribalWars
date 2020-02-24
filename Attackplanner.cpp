@@ -9,6 +9,8 @@
 #include <stdio.h>
 #include <math.h>
 #include <iomanip>
+#include <string>
+#include <ctime>
 using namespace std;
 
 
@@ -16,21 +18,35 @@ int main()
 {
     // Terminál törlése és méret beállítása
        cout << "\033[2J\033[1;1H";
-       cout << "\e[8;100;100t";
+       cout << "\e[8;54;76t";
     
-    // Egységek gyorsasága 1 mezőre megtételére nézve
-    double spear = 18.000000000504;
-    double sword = 21.999999999296;
-    double archer = 18.000000000504;
-    double axe = 18.000000000504;
-    double spy = 8.99999999928;
-    double light = 9.999999998;
-    double marcher = 9.999999998;
-    double heavy = 11.0000000011;
-    double ram = 29.9999999976;
-    double catapult = 29.9999999976;
-    double paladin = 9.999999998;
-    double nobleman = 34.9999999993;
+    double spear = 18 * 60;
+    double sword = 22 *60;
+    double archer = 18 *60;
+    double axe = 18 *60;
+    double spy = 9 *60;
+    double light = 10 *60;
+    double marcher = 10 *60;
+    double heavy = 11 *60;
+    double ram = 30 *60;
+    double catapult = 30 *60;
+    double paladin = 10 *60;
+    double nobleman = 35 *60;
+    
+    /* Egységek gyorsasága 1 mezőre megtételére nézve
+    double spear = 18.000000000504 * 60;
+    double sword = 21.999999999296 *60;
+    double archer = 18.000000000504 *60;
+    double axe = 18.000000000504 *60;
+    double spy = 8.99999999928 *60;
+    double light = 9.999999998 *60;
+    double marcher = 9.999999998 *60;
+    double heavy = 11.0000000011 *60;
+    double ram = 29.9999999976 *60;
+    double catapult = 29.9999999976 *60;
+    double paladin = 9.999999998 *60;
+    double nobleman = 34.9999999993 *60;
+     */
     
    /* double units[12];
         units[0] = 18.000000000504;
@@ -46,15 +62,13 @@ int main()
         units[10] = 9.999999998;
         units[11] = 34.9999999993;
     */
+    
     double starta = 0;
     double startb = 0;
     double enda = 0;
     double endb = 0;
     int unittype = 0;
     double ref = 0;
-    double hour = 0;
-    double minute = 0;
-    double second = 0;
     
     // Indító falu koodinátái
     cout << BOLDRED << "Add meg az indító falu koordinátáit:" << RESET << endl;
@@ -124,40 +138,91 @@ int main()
     // Utazási idő számolása
     double travel = (distance * unittype);
     
-    //cout << "Az utazási idő:" << travel << endl;
+    cout << "Az utazási idő:" << travel << endl;
     
     // Decimális számérték
     double dec = fmod(travel, 1);
     
-    //cout << "A decimális szám:" << dec << endl;
+    cout << "A decimális szám:" << dec << endl;
+    
+  /*
+    int year = 0;
+    int month = 0;
+    int day = 0;
+    int hours = 0;
+    int minutes = 0;
+    int seconds = 0;
+    
+    cout << "Év:" << endl;
+    cin >> year;
+    cout << "Hónap:" << endl;
+    cin >> month;
+    cout << "Nap:" << endl;
+    cin >> day;
+    cout << "Óra:" << endl;
+    cin >> hours;
+    cout << "Perc:" << endl;
+    cin >> minutes;
+    cout << "Másodperc:" << endl;
+    cin >> seconds;
+    
+    std::string nulla = "0";
+    
+    if (day < 10) {
+        day = nulla + day;
+    }
+
+    if (month < 10) {
+        month = nulla + month;
+    }
+
+    if (hours < 10) {
+        hours = nulla + hours;
+    }
+
+    if (minutes < 10) {
+        minutes = nulla + minutes;
+    }
+
+    if (seconds < 10) {
+        seconds = nulla + seconds;
+    }
+*/
+   // current date/time based on current system
+   time_t now = time(0);
+
+   //cout << "Number of sec since January 1,1970:" << now << endl;
+
+   tm *ltm = localtime(&now);
+
+   // print various components of tm structure.
+   cout << "Év: " << 1900 + ltm->tm_year << endl;
+   cout << "Hónap: "<< 1 + ltm->tm_mon<< endl;
+   cout << "Nap: "<<  ltm->tm_mday << endl;
+   cout << "Idő: "<< 1 + ltm->tm_hour << ":";
+   cout << 1 + ltm->tm_min << ":";
+   cout << 1 + ltm->tm_sec << endl;
+    
+    cout << BOLDRED << "Ez a modified:"<< travel << RESET << endl;
+
+
+    float modified =0;
+    cout << "Add meg az idődet amire időzíteni szeretnél:" << modified << endl;
+    cin >> modified;
+    //time_t modified = time(0);
+    cout << "Number of sec since January 1,1970 to modified:" << modified << endl;
     
     // A decimális számérték átalakítása
-    double decconv = dec * (0.6);
+    //double decconv = dec * (0.6);
     
     //cout << "A decimális szám átalakítva:" << decconv << endl;
     
     // Az utazási idő, már átalakítva
-    double abstravel = ((travel - dec) + decconv);
+    //double abstravel = ((travel - dec) + decconv);
     
-    cout << std:: fixed;
-    cout << setprecision(2);
-    cout << BOLDBLUE << "Utazási idő: " << RESET << abstravel << endl;
+    //cout << std:: fixed;
+    //cout << setprecision(2);
+    //cout << BOLDBLUE << "Utazási idő: " << RESET << abstravel << endl;
 
-    
-    cout << BOLDRED << "Mikorra szeretnél időzíteni? " << RESET << endl;
-    cin >> ref;
-    
-    
-    //cout << reinforcement << endl;
-    //cout << attack << endl;
-    
-    cout << "Add meg a pontos időzített órát:";
-    cin >> hour;
-    cout << "Add meg a pontos időzített percet:";
-    cin >> minute;
-    cout << "Add meg a pontos időzített másodpercet:";
-    cin >> second;
-    
-    cout << "Az indítási időd: ";
-    
+    return 0;
 }
