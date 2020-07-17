@@ -130,24 +130,27 @@ int main()
     cin >> nemesmennyiseg;
     
     //Összesített nyersanyagszükséglet
-    float osszesfa = (ermemennyiseg * ermefa) + (nemesfa * nemesmennyiseg);
-    float osszesagyag = (ermemennyiseg * ermeagyag) + (nemesagyag * nemesmennyiseg);
-    float osszesvas = (ermemennyiseg * ermevas) + (nemesvas * nemesmennyiseg);
+    signed long long int osszesfa = (ermemennyiseg * ermefa) + (nemesfa * nemesmennyiseg);
+    signed long long int osszesagyag = (ermemennyiseg * ermeagyag) + (nemesagyag * nemesmennyiseg);
+    signed long long int osszesvas = (ermemennyiseg * ermevas) + (nemesvas * nemesmennyiseg);
     
     cout << GRAY << "#Szükséges idő/nyersanyagok a gyártáshoz:" << RESET << endl;
     cout << GRAY << "#----------------------------------------" << RESET << endl;
     
     //Összes szükséges fa és idő
     cout << BOLDBLUE << "Fa: " << RESET << (osszesfa - alapfa) << BOLDBLUE
-    <<"    Idő(h): " << RESET << ((osszesfa - alapfa) / termelesfa) << BOLDBLUE << " --->(d): " << RESET << (((osszesfa - alapfa) / termelesfa) /24) << endl;
+    <<" ---> Idő(h): " << RESET << ((osszesfa - alapfa) / termelesfa) << BOLDBLUE << " ---> Idő(d): " << RESET << (((osszesfa - alapfa) / termelesfa) /24) << endl;
     
     //Összes szükséges agyag és idő
     cout << BOLDBLUE << "Agyag: " << RESET << (osszesagyag - alapagyag) << BOLDBLUE
-    <<"    Idő(h): " << RESET << ((osszesagyag - alapagyag) / termelesagyag) << BOLDBLUE << " --->(d): " << RESET << (((osszesagyag - alapagyag) / termelesagyag) /24) << endl;
+    <<" ---> Idő(h): " << RESET << ((osszesagyag - alapagyag) / termelesagyag) << BOLDBLUE << " --->Idő (d): " << RESET << (((osszesagyag - alapagyag) / termelesagyag) /24) << endl;
     
     //Összes szükséges vas és idő
     cout << BOLDBLUE << "Vas: " << RESET << (osszesvas - alapvas) << BOLDBLUE
-    <<"    Idő(h): "<< RESET << ((osszesvas - alapvas) / termelesvas) << BOLDBLUE << " --->(d): " << RESET << (((osszesvas - alapvas) / termelesfa) /24) << endl;
+    <<" ---> Idő(h): "<< RESET << ((osszesvas - alapvas) / termelesvas) << BOLDBLUE << " ---> Idő(d): " << RESET << (((osszesvas - alapvas) / termelesfa) /24) << endl << endl;
+            
+    // Összes szükséges tanyahely
+            cout << BOLDBLUE << "Tanyahely: " << RESET << (nemesmennyiseg * 100) << endl;
     }
         else
         {
