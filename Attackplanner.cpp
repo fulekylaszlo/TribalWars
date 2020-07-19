@@ -19,7 +19,7 @@ int main()
     // Terminál törlése és méret beállítása
        cout << "\033[2J\033[1;1H";
        cout << "\e[8;54;76t";
-    
+
     double spear = 18 * 60;
     double sword = 22 *60;
     double archer = 18 *60;
@@ -32,7 +32,7 @@ int main()
     double catapult = 30 *60;
     double paladin = 10 *60;
     double nobleman = 35 *60;
-    
+
     /* Egységek gyorsasága 1 mezőre megtételére nézve
     double spear = 18.000000000504 * 60;
     double sword = 21.999999999296 *60;
@@ -47,7 +47,7 @@ int main()
     double paladin = 9.999999998 *60;
     double nobleman = 34.9999999993 *60;
      */
-    
+
    /* double units[12];
         units[0] = 18.000000000504;
         units[1] = 21.999999999296;
@@ -62,28 +62,28 @@ int main()
         units[10] = 9.999999998;
         units[11] = 34.9999999993;
     */
-    
+
     double starta = 0;
     double startb = 0;
     double enda = 0;
     double endb = 0;
     int unittype = 0;
     double ref = 0;
-    
+
     // Indító falu koodinátái
     cout << BOLDRED << "Add meg az indító falu koordinátáit:" << RESET << endl;
     cout << "x1: ";
     cin >> starta;
     cout << "y1: ";
     cin >> startb;
-    
+
     // Érkező falu koordinátái
     cout << BOLDRED << "Add meg az érkezési falu koordinátáit:" << RESET << endl;
     cout << "x2: ";
     cin >> enda;
     cout << "y2: ";
     cin >> endb;
-    
+
     // Milyen egységgel számoljunk
     cout << BOLDRED << "Milyen egységgel szeretnél számolni ?" << RESET << endl;
     cout << GRAY << "Lándzsás = 1" << endl;
@@ -98,10 +98,10 @@ int main()
     cout << "Katapult = 10" << endl;
     cout << "Lovag = 11" << endl;
     cout << "Nemes = 12" << RESET << endl;
-   
+
     cout << BOLDRED << "Az általad választott egység: " << RESET;
     cin >> unittype;
-    
+
     switch (unittype)
         {
         case 1 : unittype = spear;
@@ -129,65 +129,22 @@ int main()
         case 12 : unittype = nobleman;
             break;
         }
-    
+
     // Távolság számolása
     double distance = sqrt( (enda - starta) * (enda - starta) + (endb - startb) * (endb - startb) );
-    
+
     cout << BOLDBLUE << "A távolság a két falu között: " << RESET << distance << endl;
-    
+
     // Utazási idő számolása
     double travel = (distance * unittype);
-    
+
     cout << "Az utazási idő:" << travel << endl;
-    
+
     // Decimális számérték
     double dec = fmod(travel, 1);
-    
+
     cout << "A decimális szám:" << dec << endl;
-    
-  /*
-    int year = 0;
-    int month = 0;
-    int day = 0;
-    int hours = 0;
-    int minutes = 0;
-    int seconds = 0;
-    
-    cout << "Év:" << endl;
-    cin >> year;
-    cout << "Hónap:" << endl;
-    cin >> month;
-    cout << "Nap:" << endl;
-    cin >> day;
-    cout << "Óra:" << endl;
-    cin >> hours;
-    cout << "Perc:" << endl;
-    cin >> minutes;
-    cout << "Másodperc:" << endl;
-    cin >> seconds;
-    
-    std::string nulla = "0";
-    
-    if (day < 10) {
-        day = nulla + day;
-    }
 
-    if (month < 10) {
-        month = nulla + month;
-    }
-
-    if (hours < 10) {
-        hours = nulla + hours;
-    }
-
-    if (minutes < 10) {
-        minutes = nulla + minutes;
-    }
-
-    if (seconds < 10) {
-        seconds = nulla + seconds;
-    }
-*/
    // current date/time based on current system
    time_t now = time(0);
 
@@ -202,7 +159,7 @@ int main()
    cout << "Idő: "<< 1 + ltm->tm_hour << ":";
    cout << 1 + ltm->tm_min << ":";
    cout << 1 + ltm->tm_sec << endl;
-    
+
     cout << BOLDRED << "Ez a modified:"<< travel << RESET << endl;
 
 
@@ -211,15 +168,10 @@ int main()
     cin >> modified;
     //time_t modified = time(0);
     cout << "Number of sec since January 1,1970 to modified:" << modified << endl;
-    
+
     // A decimális számérték átalakítása
     //double decconv = dec * (0.6);
-    
-    //cout << "A decimális szám átalakítva:" << decconv << endl;
-    
-    // Az utazási idő, már átalakítva
-    //double abstravel = ((travel - dec) + decconv);
-    
+
     //cout << std:: fixed;
     //cout << setprecision(2);
     //cout << BOLDBLUE << "Utazási idő: " << RESET << abstravel << endl;
