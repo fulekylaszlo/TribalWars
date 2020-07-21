@@ -4,6 +4,7 @@
 -> Érme/nemes nyersanyagszükséglet kalkulátor<br/>
 -> Támadásszervező<br/>
 -> Tanyahely kalkulátor<br/>
+-> TODO lista<br/>
 
 ###  [![Generic badge](https://img.shields.io/badge/Version-1.1.2-blue.svg)](https://shields.io/)Érme/nemes nyersanyagszükséglet kalkulátor:
 -> Kiszámolhatjuk a nemes illetve érmegyártás nyersanyagszükségletét.<br/>
@@ -19,3 +20,13 @@ elegendő nyersanyagunk.<br/>
 ### [![Generic badge](https://img.shields.io/badge/Version-1.1.0-blue.svg)](https://shields.io/)Tanyahely kalkulátor:
 -> Segít kiszámolni egy adott faluban, az őrtorony által elfoglalt tanyahelyet.<br/>
 -> Megadja, hogy az őrtorony felépítése után mennyi szabad tanyahelyünk marad.<br/>
+
+
+# TODO lista
+- [x] Alapkoncepciók létrehozása
+- [x] Szabad tanyahely kiszámítása
+- [x] Zászlók hozzáadása az érmekalkulátorhoz
+- [x] Támadásszervező egységekre való lebontása
+- [] Támadásszervező hibák kijavítása
+- [] Támadásszervező pontosabb meghatározása
+- [] Érmekalkulátorhoz több bónusz hozzáadása
