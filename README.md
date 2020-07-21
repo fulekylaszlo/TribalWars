@@ -6,6 +6,7 @@
 -> Tanyahely kalkulátor<br/>
 
 ### Érme/nemes nyersanyagszükséglet kalkulátor:
+[![Generic badge](https://img.shields.io/badge/<Version>-<1.1.2>-<green>.svg)](https://shields.io/)
 -> Kiszámolhatjuk a nemes illetve érmegyártás nyersanyagszükségletét.<br/>
 -> Egy pontos időt kapunk ami megadja, hogy a termelésnek megfelelően mikor lesz
 elegendő nyersanyagunk.<br/>
