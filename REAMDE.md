@@ -1,1 +1,1 @@
-Its a readmeeeee!
+Kalkulátor a Klánháború online böngészős játékhoz.
