@@ -1,4 +1,4 @@
-# Klánháború Kalkulátorok
+# Klánháború Kalkulátorok 🎮 🖥
 
 ## Tartalom:
 -> Érme/nemes nyersanyagszükséglet kalkulátor<br/>
