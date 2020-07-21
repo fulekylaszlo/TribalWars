@@ -12,10 +12,10 @@ elegendő nyersanyagunk.<br/>
 -> Különböző extrákat is használhatunk, mint például az érmecsökkentéses zászlók.<br/>
 
 
-### [![Generic badge](https://img.shields.io/badge/Version-1.1.4-blue.svg)]Támadásszervező:
+### [![Generic badge](https://img.shields.io/badge/Version-1.1.4-blue.svg)](https://shields.io/)Támadásszervező:
 -> Támadások szervezéséhez, illetve egységek mozgási sebességéhez való segítség.<br/>
 
 
-### [![Generic badge](https://img.shields.io/badge/Version-1.1.0-blue.svg)]Tanyahely kalkulátor:
+### [![Generic badge](https://img.shields.io/badge/Version-1.1.0-blue.svg)](https://shields.io/)Tanyahely kalkulátor:
 -> Segít kiszámolni egy adott faluban, az őrtorony által elfoglalt tanyahelyet.<br/>
 -> Megadja, hogy az őrtorony felépítése után mennyi szabad tanyahelyünk marad.<br/>
