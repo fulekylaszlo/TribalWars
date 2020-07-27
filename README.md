@@ -27,6 +27,7 @@ elegendő nyersanyagunk.<br/>
 - [x] Szabad tanyahely kiszámítása
 - [x] Zászlók hozzáadása az érmekalkulátorhoz
 - [x] Támadásszervező egységekre való lebontása
+- [] Dinimikus csoportok hozzáadása a támadásszervezőhöz
 - [] Támadásszervező hibák kijavítása
 - [] Támadásszervező pontosabb meghatározása
 - [] Érmekalkulátorhoz több bónusz hozzáadása
